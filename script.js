@@ -1,4 +1,5 @@
 const pwEl = document.getElementById("pw");
+const pwdaysEl = document.getElementById("pwdays");
 const copyEl = document.getElementById("copy");
 const lenEl = document.getElementById("len");
 const upperEl = document.getElementById("upper");
@@ -55,6 +56,24 @@ function generatePassword() {
     }
 
     pwEl.innerText = password;
+    checkDays(password);
+    
+   
+}
+
+function checkDays(password) { 
+    var mellt = new Mellt();
+    var daysToCrack = mellt.CheckPassword(password);
+    if(daysToCrack <= 0 ){
+        pwdaysEl.innerText = "Tempo para quebrar senha: instantânea";
+    }else if(daysToCrack > 0 && daysToCrack <= 31 ){
+        pwdaysEl.innerText = "Tempo para quebrar senha: "+ daysToCrack + " dias"
+    }else if (daysToCrack > 31 && daysToCrack <= 36500){
+        pwdaysEl.innerText = "Tempo para quebrar senha: "+ (daysToCrack / 12).toFixed(0) + " meses"
+    }else{
+        pwdaysEl.innerText = "Tempo para quebrar senha: "+ (daysToCrack / 36500).toFixed(0) + " séculos"
+    }
+
 }
 
 function generateX() {

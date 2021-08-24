@@ -6,6 +6,7 @@
 
 body {
     background-image: url('backgroud.jpg');
+
     background-color: rgb(10, 95, 165);
     color: white;
     display: flex;
@@ -39,14 +40,22 @@ body {
     overflow: auto;
 }
 
-#pw{
-    text-align: center;
+.pwdays {
+  
+    display: flex;
+    font-size: 1.0rem;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+    overflow: auto;
 }
 
 .pw button {
     background-color: rgb(17, 176, 216);
     border: none;
-    color: rgb(238, 245, 236);
+    color: rgb(29, 2, 56);
     cursor: pointer;
     font-family: inherit;
     font-weight: bold;
