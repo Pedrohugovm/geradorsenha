@@ -67,11 +67,11 @@ function checkDays(password) {
     if(daysToCrack <= 0 ){
         pwdaysEl.innerText = "Tempo para quebrar senha: instantânea";
     }else if(daysToCrack > 0 && daysToCrack <= 31 ){
-        pwdaysEl.innerText = "Tempo para quebrar senha: "+ daysToCrack + " dias"
+        pwdaysEl.innerText = "Tempo para quebrar senha: "+ daysToCrack + " dia(s)"
     }else if (daysToCrack > 31 && daysToCrack <= 36500){
         pwdaysEl.innerText = "Tempo para quebrar senha: "+ (daysToCrack / 12).toFixed(0) + " meses"
     }else{
-        pwdaysEl.innerText = "Tempo para quebrar senha: "+ (daysToCrack / 36500).toFixed(0) + " séculos"
+        pwdaysEl.innerText = "Tempo para quebrar senha: "+ (daysToCrack / 36500).toFixed(0) + " século(s)"
     }
 
 }
@@ -115,4 +115,8 @@ copyEl.addEventListener("click", () => {
     document.execCommand("copy");
     textarea.remove();
     alert("Password copied to clipboard");
+});
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    particlesJS.load('particles-container', 'particlesjs-config.json');
 });
