@@ -116,3 +116,7 @@ copyEl.addEventListener("click", () => {
     textarea.remove();
     alert("Password copied to clipboard");
 });
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    particlesJS.load('particles-container', 'particlesjs-config.json');
+});
