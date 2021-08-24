@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Password Generator</title>
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="Mellt.js"></script>
         <script src="common-passwords.js"></script>
         <script src="script.js" defer></script>
@@ -12,43 +16,81 @@
 
     </head>
     <body>
-        <div class="pw-container">
-            <div class="pw-header">
-                <div class="pw">
-                    <span id="pw">l823Zs78#</span>
-                    <button id="copy">Copy</button>
+        <div class="column">
+            <div class="pw-container rounded">
+                <div class="pw-header">
+                    <div class="pw">
+                        <span id="pw">XXXXXXXXX</span>
+                        <button id="copy" class="rounded">Copiar</button>
+                    </div>
+                    <div class="pwdays">
+                        <span id="pwdays"></span>
+                    </div>
                 </div>
-                <div class="pwdays">
-                    <span id="pwdays"></span>
+                <div class="pw-body">
+                    <div class="form-control">
+                        <label for="len" class="text-dark">Tamanho da senha</label>
+                        <input id="len" value="9" type="number" min="2" max="30" />
+                    </div>
+                    <div class="form-control">
+                        <label for="upper" class="text-dark">Letra maiúscula</label>
+                        <input id="upper" type="checkbox" />
+                    </div>
+                    <div class="form-control">
+                        <label for="lower" class="text-dark">Letra minúscula</label>
+                        <input id="lower" type="checkbox" />
+                    </div>
+                    <div class="form-control">
+                        <label for="number" class="text-dark">Números</label>
+                        <input id="number" type="checkbox" />
+                    </div>
+                    <div class="form-control">
+                        <label for="symbol" class="text-dark">Símbolos</label>
+                        <input id="symbol" type="checkbox" />
+                    </div>
+                    <button class="generate btn btn-success" id="generate">
+                        Gerar senha segura
+                    </button>
+                </div>          
+            </div>   
+            <br>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" id="modalButton">
+                Mais informações
+            </button>
+            
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                    <h4 class="modal-title text-dark">Deixe sua senha mais segura</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body text-dark">
+                        <span class="text-danger">Por que precisamos de uma senha segura?</span>
+                        <p>Atualmente muitos dos crimes estão sendo praticados por meio cibernéticos, com isso é bom se proteger cada vez mais.</p>
+                        <p>78% das pessoas ainda usam senhas simples.</p>
+                        <span class="text-danger">O que é preciso para ter uma senha segura?</span>
+                        <p>Números, letras e símbolos. Além de ter ao menos 9 caracteres.</p>
+                        <span class="text-danger">O que isso diferencia?</span>
+                        <p>Mais segurança contra ataques de cibercriminosos.</p>
+
+                        
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                    
                 </div>
-            </div>
-            <div class="pw-body">
-                <div class="form-control">
-                    <label for="len">Tamanho da senha</label>
-                    <input id="len" value="9" type="number" min="2" max="30" />
                 </div>
-                <div class="form-control">
-                    <label for="upper">Letra maiúscula</label>
-                    <input id="upper" type="checkbox" />
-                </div>
-                <div class="form-control">
-                    <label for="lower">Letra minúscula</label>
-                    <input id="lower" type="checkbox" />
-                </div>
-                <div class="form-control">
-                    <label for="number">Números</label>
-                    <input id="number" type="checkbox" />
-                </div>
-                <div class="form-control">
-                    <label for="symbol">Símbolos</label>
-                    <input id="symbol" type="checkbox" />
-                </div>
-                <button class="generate" id="generate">
-                    Gerar senha segura
-                </button>
-            </div>
+            </div>     
         </div>
-    </body>
-    
+    </body>   
  
 </html>

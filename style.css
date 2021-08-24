@@ -2,6 +2,7 @@
 
 * {
     box-sizing: border-box;
+    color:rgb(255, 255, 255);
 }
 
 body {
@@ -33,7 +34,8 @@ body {
     display: flex;
     font-size: 1.5rem;
     align-items: center;
-    height: 70px;
+    text-align: center;
+    height: 4,375rem;
     width: 100%;
     position: relative;
     padding: 1rem;
@@ -90,9 +92,37 @@ body {
     color: rgb(255, 255, 255);
     cursor: pointer;
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    padding: 0.75rem;
-    margin-top: 1rem;
+    padding: 1rem;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+input { 
+    text-align: center; 
+    width: 3.25rem;
+    color: black;
+    height: 1.25rem;
+}
+
+label {
+    display: inline-block;
+    width: 25rem;
+    text-align: left;
+}
+
+p{
+    color: #000;
+}
+
+#modalButton {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-top: 0.75rem;
     width: 100%;
 }
