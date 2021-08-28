@@ -3,26 +3,26 @@
 * {
     box-sizing: border-box;
     color:rgb(255, 255, 255);
+    
 }
 
 body {
-    background-image: url('backgroud.jpg');
-
-    background-color: rgb(10, 95, 165);
-    color: white;
+    background-color: #7A7A7A !important;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Poppins", sans-serif;
     margin: 0;
     min-height: 100vh;
+    width: 100%; 
+    height: 100%; 
 }
 
 .pw-container {
     margin-top: 3.125rem;
     background-color: black;
     box-shadow: 0 4px 10px rgba(15, 102, 107, 0.5);
-    min-width: 400px;
+    min-width: 18.75rem;
 }
 
 .pw-header {
@@ -83,7 +83,7 @@ body {
     color: #eee;
     display: flex;
     justify-content: space-between;
-    margin: 0.75rem 0;
+    margin: 1.75rem 0;
 }
 
 .generate {
@@ -101,14 +101,15 @@ body {
 
 input { 
     text-align: center; 
-    width: 3.25rem;
+    position: sticky;
+    width: 3rem;
     color: black;
     height: 1.25rem;
 }
 
 label {
     display: inline-block;
-    width: 25rem;
+    width: 20rem;
     text-align: left;
 }
 
@@ -128,17 +129,16 @@ p{
 }
 
 canvas{ 
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
 }
 #particles-container{ 
-    position: absolute; 
+    position: fixed; 
     width: 100%; 
     height: 100%; 
     background-color: #7A7A7A;
-    /* background-image: url("https://images.unsplash.com/photo-1518818419601-72c8673f5852?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"); */
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: 100% 100%; 
